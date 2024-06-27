@@ -16,6 +16,12 @@ namespace gittry
             RegisterService service = new RegisterService();
             service.Regist(userModel);
             Console.ReadKey();
+
+            Console.WriteLine("請輸入使用者名稱");
+            string inputUserName = Console.ReadLine();
+            Console.WriteLine("請輸入使用者密碼");
+            string inputUserPassword = Console.ReadLine();
+
         }
     }
 }
