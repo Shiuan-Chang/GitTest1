@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using gittry.Models;
 
 namespace gittry.Services
 {
     internal class LoginService
     {
-        string userName = "admin";
-        string password = "password";
+        public bool Login(UserModel userModel)
+        {
+            if (userModel.Name == "Leo" && userModel.Email == "leo604leo604@gmail.com" && userModel.Password == "123")
+                return true;
+            return false;
+        }
 
-        public LoginService() { }
     }
 }
