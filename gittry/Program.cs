@@ -12,9 +12,15 @@ namespace gittry
     {
         static void Main(string[] args)
         {
-            UserModel userModel = new UserModel("Leo","leo604leo604@gmail.com","高雄市","abc123");
+            string userName = Console.ReadLine();
+            string email = Console.ReadLine();
+            string address = Console.ReadLine();
+            string password = Console.ReadLine();
+            UserModel userModel = new UserModel(userName,email,address,password);
             RegisterService service = new RegisterService();
             service.Regist(userModel);
+            
+            Console.WriteLine("註冊成功！");
             Console.ReadKey();
         }
     }
