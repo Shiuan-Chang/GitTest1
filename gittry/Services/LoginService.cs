@@ -8,6 +8,9 @@ namespace gittry.Services
 {
     internal class LoginService
     {
-        
+        string userName = "admin";
+        string password = "password";
+
+        public LoginService() { }
     }
 }
