@@ -12,11 +12,8 @@ namespace gittry
     {
         static void Main(string[] args)
         {
-            string userName = Console.ReadLine();
-            string email = Console.ReadLine();
-            string address = Console.ReadLine();
-            string password = Console.ReadLine();
-            UserModel userModel = new UserModel(userName,email,address,password);
+            Console.WriteLine("歡迎使用系統！ 請先進行帳號註冊：");
+            UserModel userModel = new UserModel( Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
             RegisterService service = new RegisterService();
             service.Regist(userModel);
             
