@@ -12,23 +12,35 @@ namespace gittry
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("歡迎使用系統！ 請先進行帳號註冊：");
-            UserModel userModel = new UserModel( Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
-            Console.WriteLine("請註冊/登入");
-            string userName = Console.ReadLine();
-            string email = Console.ReadLine();
-            string address = Console.ReadLine();
-            string password = Console.ReadLine();
-            UserModel userModel = new UserModel(userName,email,address,password);
-            RegisterService service = new RegisterService();
-            service.Regist(userModel);
-            
-            Console.WriteLine("註冊成功！");
+            #region 註冊模組
+            Console.WriteLine("歡迎使用者登入我們的GIT系統，請先輸入註冊訊息，以利後續登入做使用");
+            while (true)
+            {
+                string name = Console.ReadLine();
+                string email = Console.ReadLine();
+                string account = Console.ReadLine();
+                string password = Console.ReadLine();
+                UserModel registerModel = new UserModel(name, email, account, password);
+                RegisterService service = new RegisterService();
+                bool isSuccess = service.Regist(registerModel);
 
-            Console.WriteLine("請輸入使用者名稱");
-            string inputUserName = Console.ReadLine();
-            Console.WriteLine("請輸入使用者密碼");
-            string inputUserPassword = Console.ReadLine();
+                if (isSuccess)
+                {
+                    Console.WriteLine("註冊成功！");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("註冊失敗！請重新註冊！");
+                }
+            }
+            #endregion
+
+            #region 登入模組
+        
+            
+
+            #endregion
 
         }
     }
