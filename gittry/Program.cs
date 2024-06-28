@@ -49,7 +49,13 @@ namespace gittry
             Console.WriteLine("請輸入使用者名稱");
             string enterUserName = Console.ReadLine();
             Console.WriteLine("請輸入使用者密碼");
-            string inputUserPassword = Console.ReadLine();
+
+            string idenfications = "abc";
+            if (idenfications != "abc")
+            {
+                Console.WriteLine("驗證失敗，請確認輸入資訊是否正確");
+            }
+                          
             Console.WriteLine("登入成功");
             #endregion
 
