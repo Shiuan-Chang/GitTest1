@@ -5,7 +5,7 @@ namespace gittry
 {
     internal class LoginService
     {
-        internal void Login(UserModel userModel)
+        internal void Login(UserModel inputUserModel)
         {
             throw new NotImplementedException();
         }

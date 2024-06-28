@@ -50,8 +50,9 @@ namespace gittry
             string enterUserName = Console.ReadLine();
             Console.WriteLine("請輸入使用者密碼");
 
-            string idenfications = "abc";
-            if (idenfications != "abc")
+            string idenfications = "";
+            Console.WriteLine("請自行輸入驗證碼");
+            if (idenfications == null)
             {
                 Console.WriteLine("驗證失敗，請確認輸入資訊是否正確");
             }
